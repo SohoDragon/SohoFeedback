@@ -1,0 +1,30 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "soho-feedback-client-side-solution",
+        "id": "bfb37efe-7efb-4b3c-baae-391ab0f5914e",
+        "version": "1.0.0.12",
+        "includeClientSideAssets": true,
+        "isDomainIsolated": false,
+        "features": [
+            {
+                "title": "Feedback Web Part Assets",
+                "description": "Feedback List",
+                "id": "E84D3444-A412-47DC-999F-0D6E6EFF40A3",
+                "version": "1.0.0.8",
+                "assets": {
+                    "elementManifests": [
+                        "elements.xml"
+                    ],
+                    "elementFiles": [
+                        "listSchema.xml"
+                    ],
+                    "upgradeActions": []
+                }
+            }
+        ]
+    },
+    "paths": {
+        "zippedPackage": "solution/soho-feedback.sppkg"
+    }
+}

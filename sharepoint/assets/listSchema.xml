@@ -1,0 +1,61 @@
+<List xmlns:ows="Microsoft SharePoint"
+      Title="List Schema"
+      Name="ListSchema"
+      Direction="$Resources:Direction;"
+      Url="Lists/ListSchema"
+      BaseType="0"
+      EnableContentTypes="FALSE"
+      FolderCreation="FALSE"
+      VersioningEnabled="FALSE"
+      MajorVersionLimit="100"
+      EnableMinorVersions="FALSE"
+      MajorWithMinorVersionsLimit="0"
+      DisableAttachments="TRUE"
+      xmlns="http://schemas.microsoft.com/sharepoint/"
+      RootWebOnly="FALSE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x010029DCC15E60244AD28F62D164F6A10BF0" Name="Feedback Content Type">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="FALSE" Hidden="TRUE" Name="Title" />
+          <FieldRef ID="{D6DB0C7F-3399-484D-8FBE-3B5ADD9F6F87}" Name="FeedbackMessage" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{D6DB0C7F-3399-484D-8FBE-3B5ADD9F6F87}" Name="FeedbackMessage" StaticName="FeedbackMessage" DisplayName="Message" Type="Note" Overwrite="TRUE" RichText="FALSE" NumLines="6" />
+    </Fields>
+    <Views>
+      <View BaseViewID="1"
+            Type="HTML"
+            WebPartZoneID="Main"
+            DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+            DefaultView="TRUE"
+            MobileView="TRUE"
+            MobileDefaultView="TRUE"
+            SetupPath="pages\viewpage.aspx"
+            ImageUrl="/_layouts/images/generic.png"
+            Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="Edit"></FieldRef>
+          <FieldRef Name="FeedbackMessage"></FieldRef>
+          <FieldRef Name="Author"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID" />
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

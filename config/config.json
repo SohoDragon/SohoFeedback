@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "soho-feedback-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sohoFeedback/SohoFeedbackWebPart.js",
+          "manifest": "./src/webparts/sohoFeedback/SohoFeedbackWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SohoFeedbackWebPartStrings": "lib/webparts/sohoFeedback/loc/{locale}.js"
+  }
+}
